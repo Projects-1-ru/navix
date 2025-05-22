@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title,
             {
                opacity: 0,
-               y: 100,
+               y: 20,
                scale: 0.9,
                rotateX: 45,
             },
@@ -36,13 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
                y: 0,
                scale: 1,
                rotateX: 0,
-               duration: 1.2,
+               duration: 0.5,
                ease: "power3.out",
                scrollTrigger: {
                   trigger: title,
-                  start: "top 85%",
+                  start: "top 95%",
                   end: "bottom 65%",
-                  toggleActions: "play none none reverse",
+                  toggleActions: "play none none none",
                },
             }
          );
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             subtitle,
             {
                opacity: 0,
-               y: 40,
+               y: 20,
                scale: 0.8,
                rotateX: -15,
             },
@@ -66,13 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
                y: 0,
                scale: 1,
                rotateX: 0,
-               duration: 1,
+               duration: 0.5,
                ease: "power3.out",
                scrollTrigger: {
                   trigger: subtitle,
-                  start: "top 85%",
+                  start: "top 95%",
                   end: "bottom 65%",
-                  toggleActions: "play none none reverse",
+                  toggleActions: "play none none none",
                },
             }
          );
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             button,
             {
                opacity: 0,
-               y: 40,
+               y: 20,
                skewX: 10,
                scale: 0.95,
             },
@@ -96,13 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
                y: 0,
                skewX: 0,
                scale: 1,
-               duration: 1.2,
+               duration: 0.5,
                ease: "power3.out",
                scrollTrigger: {
                   trigger: button,
-                  start: "top 90%",
+                  start: "top 95%",
                   end: "bottom 65%",
-                  toggleActions: "play none none reverse",
+                  toggleActions: "play none none none",
                },
             }
          );
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
          advantages,
          {
             opacity: 0,
-            y: 50,
+            y: 20,
             rotationY: 90,
             z: -100,
             scale: 0.8,
@@ -129,14 +129,14 @@ document.addEventListener("DOMContentLoaded", () => {
             rotationY: 0,
             z: 0,
             scale: 1,
-            duration: 1.4,
+            duration: 0.8,
             ease: "power3.out",
             stagger: 0.25,
             scrollTrigger: {
                trigger: ".welcome__advatages",
-               start: "top 85%",
+               start: "top 90%",
                end: "bottom 65%",
-               toggleActions: "play none none reverse",
+               toggleActions: "play none none none",
             },
          }
       );
@@ -196,13 +196,13 @@ document.addEventListener("DOMContentLoaded", () => {
                {
                   opacity: 1,
                   x: 0,
-                  duration: 1,
+                  duration: 0.5,
                   ease: "power3.out",
                   scrollTrigger: {
                      trigger: slide,
-                     start: "top 80%",
+                     start: "top 90%",
                      end: "bottom 60%",
-                     toggleActions: "play none none reverse",
+                     toggleActions: "play none none none",
                   },
                }
             );
@@ -214,17 +214,17 @@ document.addEventListener("DOMContentLoaded", () => {
    if (elementExists(".gallery-block__slider")) {
       gsap.fromTo(
          ".gallery-block__slider",
-         { opacity: 0, y: 50 },
+         { opacity: 0, y: 20 },
          {
             opacity: 1,
             y: 0,
-            duration: 2,
+            duration: 1,
             ease: "power2.out",
             scrollTrigger: {
                trigger: ".gallery-block__slider",
                start: "top 90%",
                end: "top 70%",
-               toggleActions: "play none none reverse",
+               toggleActions: "play none none none",
             },
          }
       );
@@ -241,13 +241,13 @@ document.addEventListener("DOMContentLoaded", () => {
    // Hero product info body animation
    if (elementExists(".hero-product__info-body") && elementExists(".hero-product__info")) {
       gsap.from(".hero-product__info-body", {
-         y: 50,
+         y: 20,
          duration: 1,
          scrollTrigger: {
             trigger: ".hero-product__info",
             start: "top 90%",
             end: "top 70%",
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
          },
       });
    }
@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
    if (productCharacteristics.length) {
       gsap.fromTo(
          productCharacteristics,
-         { opacity: 0, y: 30 },
+         { opacity: 0, y: 20 },
          {
             opacity: 1,
             y: 0,
@@ -266,8 +266,8 @@ document.addEventListener("DOMContentLoaded", () => {
             stagger: 0.2,
             scrollTrigger: {
                trigger: ".product-details__characteristics",
-               start: "top 85%",
-               toggleActions: "play none none reverse",
+               start: "top 90%",
+               toggleActions: "play none none none",
             },
          }
       );
@@ -289,8 +289,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   ease: "power3.out",
                   scrollTrigger: {
                      trigger: container,
-                     start: "top 85%",
-                     toggleActions: "play none none reverse",
+                     start: "top 90%",
+                     toggleActions: "play none none none",
                   },
                }
             );
@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
          if (items.length) {
             gsap.fromTo(
                items,
-               { opacity: 0, y: 30 },
+               { opacity: 0, y: 20 },
                {
                   opacity: 1,
                   y: 0,
@@ -315,8 +315,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   stagger: 0.5,
                   scrollTrigger: {
                      trigger: text,
-                     start: "top 85%",
-                     toggleActions: "play none none reverse",
+                     start: "top 90%",
+                     toggleActions: "play none none none",
                   },
                }
             );
@@ -341,8 +341,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   stagger: 0.15,
                   scrollTrigger: {
                      trigger: ul,
-                     start: "top 85%",
-                     toggleActions: "play none none reverse",
+                     start: "top 90%",
+                     toggleActions: "play none none none",
                   },
                }
             );
@@ -360,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
          gsap.fromTo(
             logo,
             {
-               y: 100,
+               y: 20,
                scale: 1.3,
                opacity: 0,
             },
@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
          gsap.fromTo(
             text,
             {
-               y: 50,
+               y: 20,
                opacity: 0,
                scale: 0.9,
             },
@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
                ease: "power2.out",
                scrollTrigger: {
                   trigger: text,
-                  start: "top 80%",
+                  start: "top 90%",
                   end: "top 20%",
                }
             }
@@ -406,5 +406,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
    window.addEventListener("load", () => ScrollTrigger.refresh());
+   window.addEventListener("resize", () => ScrollTrigger.refresh());
 });
 

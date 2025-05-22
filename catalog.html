@@ -20,10 +20,10 @@
    <meta property="og:image" content="img/fav/og-image.jpg">
    <meta property="og:type" content="website">
    <!-- Styles -->
-   <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css?_v=20250519184920">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250519184920" />
-   <link rel="stylesheet" href="css/air-datepicker.min.css?_v=20250519184920">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250519184920">
+   <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css?_v=20250522135225">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250522135225" />
+   <link rel="stylesheet" href="css/air-datepicker.min.css?_v=20250522135225">
+   <link rel="stylesheet" href="css/style.min.css?_v=20250522135225">
 </head>
 
 <body>
@@ -127,17 +127,22 @@
                         <div class="catalog__menu-title">Комплектующие</div>
                         <div class="catalog__menu-slider swiper">
                            <div class="catalog__menu-wrapper swiper-wrapper">
-                              <a href="" class="catalog__menu-slide swiper-slide active">Тенты</a>
-                              <a href="" class="catalog__menu-slide swiper-slide">Сиденья</a>
-                              <a href="" class="catalog__menu-slide swiper-slide">Швартовое оборудование</a>
-                              <a href="" class="catalog__menu-slide swiper-slide">Оклейка борта</a>
-                              <a href="" class="catalog__menu-slide swiper-slide">Прицепы</a>
+                              <button type="button" data-category="1"
+                                 class="catalog__menu-slide swiper-slide active">Тенты</button>
+                              <button type="button" data-category="2"
+                                 class="catalog__menu-slide swiper-slide">Сиденья</button>
+                              <button type="button" data-category="3" class="catalog__menu-slide swiper-slide">Швартовое
+                                 оборудование</button>
+                              <button type="button" data-category="4" class="catalog__menu-slide swiper-slide">Оклейка
+                                 борта</button>
+                              <button type="button" data-category="5"
+                                 class="catalog__menu-slide swiper-slide">Прицепы</button>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="catalog__products">
-                     <div class="catalog__products-slider swiper">
+                     <div class="catalog__products-slider swiper" data-category="1">
                         <div class="catalog__products-wrapper swiper-wrapper">
                            <div class="catalog__product swiper-slide">
                               <div class="catalog__product-info">
@@ -231,6 +236,42 @@
                                  </div>
                               </div>
                            </div>
+                        </div>
+                     </div>
+                     <div class="catalog__products-slider swiper" data-category="2">
+                        <div class="catalog__products-wrapper swiper-wrapper">
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                    <div class="catalog__product-pagination"></div>
+                                 </div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       2
+                                    </a>
+                                 </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
 
                            <div class="catalog__product swiper-slide">
                               <div class="catalog__product-info">
@@ -255,8 +296,243 @@
                               </div>
                               <div class="catalog__product-details">
                                  <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       2
                                     </a>
                                  </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="catalog__products-slider swiper" data-category="3">
+                        <div class="catalog__products-wrapper swiper-wrapper">
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                    <div class="catalog__product-pagination"></div>
+                                 </div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       3
+                                    </a>
+                                 </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                    <div class="catalog__product-pagination"></div>
+                                 </div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       3
+                                    </a>
+                                 </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="catalog__products-slider swiper" data-category="4">
+                        <div class="catalog__products-wrapper swiper-wrapper">
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                    <div class="catalog__product-pagination"></div>
+                                 </div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       4
+                                    </a>
+                                 </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                    <div class="catalog__product-pagination"></div>
+                                 </div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       4
+                                    </a>
+                                 </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="catalog__products-slider swiper" data-category="5">
+                        <div class="catalog__products-wrapper swiper-wrapper">
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                    <div class="catalog__product-pagination"></div>
+                                 </div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент ходовой <br> (двухконсольная версия)
+                                       5
+                                    </a>
+                                 </h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red"><span>В корзину</span></button>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="catalog__product-pagination"></div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент стояночный 5</a></h3>
+                                 <p class="catalog__product-price">20 000 ₽</p>
+                                 <div class="catalog__product-button">
+                                    <button type="button" class="btn btn-red added"><span>В корзине</span><span>
+                                          1 шт</span></button>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="catalog__product swiper-slide">
+                              <div class="catalog__product-info">
+                                 <p class="catalog__product-code">65435</p>
+                                 <p class="catalog__product-stock">В наличии</p>
+                              </div>
+                              <div class="catalog__product-view">
+                                 <div class="catalog__product-slider swiper">
+                                    <div class="catalog__product-wrapper swiper-wrapper">
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                       <div class="catalog__product-slide swiper-slide">
+                                          <picture><source srcset="img/product.webp" type="image/webp"><img src="img/product.png" width="344" height="344" alt="Тент стояночный"></picture>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="catalog__product-pagination"></div>
+                              </div>
+                              <div class="catalog__product-details">
+                                 <h3><a href="" class="catalog__product-name">тент стояночный</a></h3>
                                  <p class="catalog__product-price">20 000 ₽</p>
                                  <div class="catalog__product-button">
                                     <button type="button" class="btn btn-red"><span>В корзину</span></button>
@@ -428,6 +704,18 @@
                               </div>
                            </div>
                         </div>
+                        <button type="button" class="more-products__slider-prev slider-prev"
+                           aria-label="Предыдущий слайд">
+                           <svg>
+                              <use xlink:href="#icon-chevron-left-2"></use>
+                           </svg>
+                        </button>
+                        <button type="button" class="more-products__slider-next slider-next"
+                           aria-label="Следующий слайд">
+                           <svg>
+                              <use xlink:href="#icon-chevron-right-2"></use>
+                           </svg>
+                        </button>
                      </div>
                   </div>
                </div>
@@ -812,6 +1100,10 @@
       <path d="M25 9 9 27l16 18" stroke="currentColor" stroke-width="12" stroke-linecap="square" />
    </svg><svg fill="none" viewBox="0 0 34 54" id="icon-chevron-right" xmlns="http://www.w3.org/2000/svg">
       <path d="m9 45 16-18L9 9" stroke="currentColor" stroke-width="12" stroke-linecap="square" />
+   </svg><svg fill="none" viewBox="0 0 35 43" id="icon-chevron-left-2" xmlns="http://www.w3.org/2000/svg">
+      <path d="M26 9.04525L10 21.3454L26 33.6455" stroke="currentColor" stroke-width="12" stroke-linecap="square" />
+   </svg><svg fill="none" viewBox="0 0 35 43" id="icon-chevron-right-2" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 33.6454L25 21.3453L9 9.04517" stroke="currentColor" stroke-width="12" stroke-linecap="square" />
    </svg><svg fill="none" viewBox="0 0 20 20" id="icon-close" xmlns="http://www.w3.org/2000/svg">
       <path
          d="M0 2.381 2.381 0 10 7.619 17.619 0 20 2.381 12.381 10 20 17.619 17.619 20 10 12.381 2.381 20 0 17.619 7.619 10 0 2.381Z"
@@ -852,9 +1144,9 @@
          fill="currentColor" />
    </svg>
 </svg>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250519184920"></script>
-   <script src="js/app.js?_v=20250519184920"></script>
-   <script src="js/map.js?_v=20250519184920"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250522135225"></script>
+   <script src="js/app.js?_v=20250522135225"></script>
+   <script src="js/map.js?_v=20250522135225"></script>
 
 </body>
 

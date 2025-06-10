@@ -328,9 +328,10 @@
       }
 
       window.addEventListener('load', () => {
-         const galleryWrapper = document.querySelector('.gallery-block__slider-wrapper');
+         const hasSliderGallery = document.querySelector('.gallery-block__slider-wrapper a');
+         const hasStaticGallery = document.querySelector('.gallery__content a');
 
-         if (galleryWrapper && galleryWrapper.querySelector('a')) {
+         if (hasSliderGallery || hasStaticGallery) {
             loadScript('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js', () => {
                loadScript('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js', () => {
                   initPhotoSwipe();
@@ -338,6 +339,7 @@
             });
          }
       });
+
 
       function loadScript(src, callback) {
          const script = document.createElement('script');
@@ -349,17 +351,27 @@
          document.body.appendChild(script);
       }
 
-      // Инициализация Photoswipe
       function initPhotoSwipe() {
          if (typeof PhotoSwipeLightbox !== 'undefined') {
-            const lightbox = new PhotoSwipeLightbox({
+            // Галерея внутри слайдера
+            const sliderLightbox = new PhotoSwipeLightbox({
                gallery: '.gallery-block__slider-wrapper',
                children: 'a',
                pswpModule: PhotoSwipe
             });
-            lightbox.init();
+            sliderLightbox.init();
+
+            // Вторая галерея без слайдера
+            const staticLightbox = new PhotoSwipeLightbox({
+               gallery: '.gallery__content',
+               children: 'a',
+               pswpModule: PhotoSwipe
+            });
+            staticLightbox.init();
          }
       }
+
+
 
 
       /*------------------------------
@@ -398,7 +410,6 @@
       /*------------------------------
       Инициализация главного слайдера продуктов (если нужно на мобилке)
       ------------------------------*/
-      // 1. Сначала объявляем функцию
       function handleAfterVisibility(swiperInstance, sliderElement) {
          if (swiperInstance.isEnd) {
             sliderElement.classList.add('hide-after');
@@ -407,7 +418,6 @@
          }
       }
 
-      // 2. Затем инициализация слайдера
       let mainSwiper = null;
 
       const initMainSwiper = debounce(() => {
@@ -439,7 +449,6 @@
          });
       }, 200);
 
-      // Запуск
       initMainSwiper();
       window.addEventListener('resize', initMainSwiper);
 

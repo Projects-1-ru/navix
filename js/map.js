@@ -1,5 +1,14 @@
+
 function initMap() {
-   const mapElement = document.getElementById('map');
+   createCustomMap('map', 'img/icons/location.png', { width: 20, height: 20 });
+}
+
+function initMap2() {
+   createCustomMap('map2', 'img/icons/location-big.png', { width: 30, height: 40 });
+}
+
+function createCustomMap(elementId, iconUrl, iconSize = { width: 20, height: 20 }) {
+   const mapElement = document.getElementById(elementId);
    if (!mapElement) return;
 
    const mapStyle = [
@@ -16,28 +25,30 @@ function initMap() {
       { "featureType": "water", "elementType": "all", "stylers": [{ "lightness": -20 }] }
    ];
 
+   const centerCoords = { lat: 59.99418563639324, lng: 30.382681353356723 };
+
    const map = new google.maps.Map(mapElement, {
-      center: { lat: 59.99418563639324, lng: 30.382681353356723 },
+      center: centerCoords,
       zoom: 10,
       styles: mapStyle
    });
 
    const marker = new google.maps.Marker({
-      position: { lat: 59.99418563639324, lng: 30.382681353356723 },
+      position: centerCoords,
       map: map,
       title: "My address",
       icon: {
-         url: 'img/icons/location.png',
-         scaledSize: new google.maps.Size(20, 20),
+         url: iconUrl,
+         scaledSize: new google.maps.Size(iconSize.width, iconSize.height),
          origin: new google.maps.Point(0, 0),
-         anchor: new google.maps.Point(20, 20)
+         anchor: new google.maps.Point(iconSize.width / 2, iconSize.height) // якорь по центру внизу
       }
    });
 
    const infoWindowContent = document.getElementById('marker-info')?.innerHTML || 'No info available';
    const infoWindow = new google.maps.InfoWindow({
       content: infoWindowContent,
-      position: { lat: 59.99418563639324, lng: 30.382681353356723 },
+      position: centerCoords,
       pixelOffset: new google.maps.Size(0, -10)
    });
 
@@ -55,14 +66,19 @@ function initMap() {
    });
 }
 
+function loadMaps() {
+   if (document.getElementById('map')) initMap();
+   if (document.getElementById('map2')) initMap2();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
    setTimeout(function () {
-      if (document.getElementById('map')) {
+      if (document.getElementById('map') || document.getElementById('map2')) {
          const script = document.createElement('script');
-         script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA914JB360848OwtQu0vzggQZMOloEzmKU&libraries=marker&callback=initMap";
+         script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA914JB360848OwtQu0vzggQZMOloEzmKU&libraries=marker&callback=loadMaps";
          script.async = true;
          script.defer = true;
          document.body.appendChild(script);
       }
-   }, 5000);
+   }, 300);
 });

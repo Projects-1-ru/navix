@@ -14,17 +14,17 @@
    <link rel="icon" type="image/x-icon" href="img/fav/favicon.ico">
    <link rel="icon" type="image/svg+xml" href="img/fav/favicon.svg">
    <!-- Meta Description -->
-   <title>Главная</title>
+   <title>Где купить</title>
    <meta name="description" content="Лодки NAVIX">
    <meta property="og:title" content="NAVIX">
    <meta property="og:description" content="Лодки NAVIX">
    <meta property="og:image" content="img/fav/og-image.jpg">
    <meta property="og:type" content="website">
    <!-- Styles -->
-   <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css?_v=20250522135225">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250522135225" />
-   <link rel="stylesheet" href="css/air-datepicker.min.css?_v=20250522135225">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250522135225">
+   <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/air-datepicker.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -117,111 +117,52 @@
          </div>
       </header>
       <main>
-         <style>
-            .site-present {
-               background: #737678;
-               margin-top: 200px;
-               padding: 60px 0;
-               position: relative;
-            }
-
-            .site-present-block {
-               display: flex;
-               align-items: flex-start;
-               gap: 60px;
-            }
-
-            .site-present-block h2 {
-               margin-bottom: 30px;
-               text-transform: uppercase;
-               font-size: 40px;
-            }
-
-            .site-present__links {
-               flex: 0 1 50%;
-               max-width: 400px;
-               z-index: 2;
-            }
-
-            .site-present__links .btn {
-               display: flex;
-               margin-bottom: 10px;
-            }
-
-            .logo-stroke {
-               position: absolute;
-               top: 0;
-               left: 0;
-               inset: 0;
-            }
-
-            .logo-stroke img {
-               width: 100%;
-               height: 100%;
-               object-fit: contain;
-            }
-
-            @media (max-width: 980px) {
-               .site-present {
-                  background: #737678;
-                  margin-top: 100px;
-                  padding: 40px 0;
-               }
-            }
-
-            @media (max-width: 767px) {
-               .site-present-block {
-                  flex-direction: column;
-                  gap: 40px;
-               }
-
-               .site-present__links {
-                  margin-inline: auto;
-                  text-align: center;
-               }
-            }
-         </style>
-         <div class="site-present">
-            <div class="container">
-               <div class="site-present-block">
-                  <div class="site-present__links">
-                     <h2>Страницы</h2>
-                     <a href="home.html" class="btn btn-red"><span>Главная</span></a>
-                     <a href="boat.html" class="btn btn-red"><span>Страница лодки</span></a>
-                     <a href="catalog.html" class="btn btn-red"><span>Комплектующие</span></a>
-                     <a href="product.html" class="btn btn-red"><span>Страница товара</span></a>
-                     <a href="about.html" class="btn btn-red"><span>О нас</span></a>
-                     <a href="technologies.html" class="btn btn-red"><span>Технологии</span></a>
-                     <a href="cart.html" class="btn btn-red"><span>Корзина</span></a>
-                     <a href="cabinet-orders.html" class="btn btn-red"><span>Кабинет. Заказы</span></a>
-                     <a href="cabinet-files.html" class="btn btn-red"><span>Кабинет. Файлы</span></a>
-                     <a href="cabinet-book.html" class="btn btn-red"><span>Кабинет. Запись</span></a>
-                     <a href="constructor.html" class="btn btn-red"><span>Конструктор</span></a>
-                     <a href="dealers.html" class="btn btn-red"><span>Где купить</span></a>
-                     <a href="dealers-2.html" class="btn btn-red"><span>Где купить 2</span></a>
-                     <a href="gallery.html" class="btn btn-red"><span>Галерея</span></a>
-                  </div>
-                  <div class="site-present__links">
-                     <h2>Попапы</h2>
-                     <button type="button" class="open-popup btn" data-popup="city-popup"><span>Выбор
-                           города</span></button>
-                     <button type="button" class="open-popup btn" data-popup="thanks-popup"><span>Заявка
-                           принята</span></button>
-                     <button type="button" class="open-popup btn" data-popup="thanks-sec-popup"><span>Заявка
-                           принята 2</span></button>
-                     <button type="button" class="open-popup btn" data-popup="cooperation-popup"><span>Стать
-                           диллером</span></button>
-                     <button type="button" class="open-popup btn" data-popup="login-popup"><span>Войти</span></button>
-                     <button type="button" class="open-popup btn" data-popup="order-popup">
-                        <span>Заказ.Кабинет(mobile)</span></button>
-                     <button type="button" class="open-popup btn" data-popup="no-stock-popup">
-                        <span>Нет в наличии</span></button>
-                     <p>(!)Остальные попапы на своих страницах, так как не могут существовать самостоятельно</p>
-                  </div>
+         <section class="gallery">
+            <div class="gallery__body container">
+               <div class="breadcrumbs">
+                  <a href="">Главная</a> / <span>Галерея</span>
+               </div>
+               <h1 class="gallery__title title">Галерея</h1>
+               <div class="gallery__content">
+                  <a href="img/gallery/1.png" class="gallery__item" data-pswp-width="1600" data-pswp-height="900">
+                     <picture>
+                        <source srcset="img/gallery/1.webp" type="image/webp">
+                        <img src="img/gallery/1.png" width="800" height="450" alt="Navix галерея">
+                     </picture>
+                  </a>
+                  <a href="img/gallery/1.png" class="gallery__item" data-pswp-width="1600" data-pswp-height="900">
+                     <picture>
+                        <source srcset="img/gallery/1.webp" type="image/webp">
+                        <img src="img/gallery/1.png" width="800" height="450" alt="Navix галерея">
+                     </picture>
+                  </a>
+                  <a href="img/gallery/1.png" class="gallery__item" data-pswp-width="1600" data-pswp-height="900">
+                     <picture>
+                        <source srcset="img/gallery/1.webp" type="image/webp">
+                        <img src="img/gallery/1.png" width="800" height="450" alt="Navix галерея">
+                     </picture>
+                  </a>
+                  <a href="img/gallery/1.png" class="gallery__item" data-pswp-width="1600" data-pswp-height="900">
+                     <picture>
+                        <source srcset="img/gallery/1.webp" type="image/webp">
+                        <img src="img/gallery/1.png" width="800" height="450" alt="Navix галерея">
+                     </picture>
+                  </a>
+                  <a href="img/gallery/1.png" class="gallery__item" data-pswp-width="1600" data-pswp-height="900">
+                     <picture>
+                        <source srcset="img/gallery/1.webp" type="image/webp">
+                        <img src="img/gallery/1.png" width="800" height="450" alt="Navix галерея">
+                     </picture>
+                  </a>
+                  <a href="img/gallery/1.png" class="gallery__item" data-pswp-width="1600" data-pswp-height="900">
+                     <picture>
+                        <source srcset="img/gallery/1.webp" type="image/webp">
+                        <img src="img/gallery/1.png" width="800" height="450" alt="Navix галерея">
+                     </picture>
+                  </a>
                </div>
             </div>
-            <div class="logo-stroke"><img src="img/logo-stroke.svg" alt=""></div>
-         </div>
+         </section>
       </main>
       <footer class="footer">
          <div class="footer__body container">
@@ -501,29 +442,6 @@
       </div>
    </div>
 
-   <!--Нет в наличии-->
-   <div class="no-stock-popup popup" data-popup="no-stock-popup">
-      <div class="no-stock-popup__body popup-body">
-         <div class="no-stock-popup__title">Товара нет в наличии?</div>
-         <div class="no-stock-popup__subtitle">Скоро он появится на складе! Оставьте свои данные, чтобы мы смогли
-            вовремя сообщить вам о поступлении.</div>
-         <form class="login-popup__form popup-form">
-            <div class="popup-form__area">
-               <input type="text" class="input" placeholder="Имя*" required>
-            </div>
-            <div class="popup-form__area">
-               <input type="email" class="input" placeholder="Email*" required>
-            </div>
-            <button type="submit" class="btn btn-red"><span>Отправить</span></button>
-         </form>
-         <div class="no-stock-popup__close popup-close">
-            <svg>
-               <use xlink:href="#icon-close"></use>
-            </svg>
-         </div>
-      </div>
-   </div>
-
    <!--Подтверждение выхода-->
    <div class="exit-popup popup" data-popup="exit-popup">
       <div class="exit-popup__body popup-body">
@@ -617,6 +535,7 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250522135225"></script>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js?_v=20250522135225"></script>
    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js?_v=20250522135225"></script>
+   <script src="js/anim.js?_v=20250522135225"></script>
    <script src="js/app.js?_v=20250522135225"></script>
    <script src="js/map.js?_v=20250522135225"></script>
 
